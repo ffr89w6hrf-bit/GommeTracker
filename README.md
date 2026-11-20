@@ -30,3 +30,10 @@ App installabile per iPhone, completamente in italiano. Gestisce più auto, tren
 
 ## Versione 1.1 — correzione delle registrazioni
 Nello Storico o negli Ultimi cambi di un'auto, premi **Correggi data / km** sulla registrazione. Un cambio comprende smontaggio e montaggio: correggerne uno aggiorna entrambi. Il sistema controlla i cambi precedenti e successivi e ricalcola le distanze dei treni. I dati esistenti rimangono in localStorage con la stessa chiave `gommetracker.v1`. Prima di aggiornare, esporta un backup JSON dalla sezione Dati.
+
+## Versione 1.2 — eliminazione auto e treni
+- Dalla scheda di ogni automobile, **Elimina auto** rimuove l'automobile, i suoi treni e tutte le registrazioni correlate, previa conferma esplicita.
+- Nella lista dei treni di ogni automobile, **Elimina** cancella solo un treno mai montato (senza eventi).
+- I treni con storico non possono essere eliminati singolarmente, per evitare di compromettere la contabilità chilometrica: si possono archiviare dopo lo smontaggio.
+- Rimangono disponibili le correzioni data/km della versione 1.1.
+- La chiave dati `gommetracker.v1` resta invariata: aggiornando i file nel medesimo repository e indirizzo, i dati locali sono preservati. Prima di aggiornare, esportare un backup JSON.
